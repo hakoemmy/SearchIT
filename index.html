@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="Affordable and profesional Web Design">
+	<meta name="keywords" content="Web Design, Affordable and Web Design">
+	<meta name="author" content="HOLLEC LTD">
+	<title>SearchIT</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Lexend+Deca|Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+      <div id="page-container">
+          <div id="content-wrap">
+	   <header>
+     	<div class="top-part">
+     		<div class="container">
+     		<div id="branding-title">
+     			<h1>search<span class="highlight">IT</span></h1>
+     		</div>
+     		 <form>
+     	  <input id="search-term" type="text" placeholder="City or State" 
+            onkeyup="search();">
+     		 </form>
+     		</div>
+     	</div>
+     </header>
+
+     <section id="content">
+     	 <div class="container">
+
+     	   <div class="results-list">
+                    <div id="results-count">
+                          <h4 id="searches-count"> 10 search results found!</h4>
+                     </div>
+     	   	      <ul class="list">
+     	   	      </ul>
+                     <div id="loading-div">
+                           <h2>Loading...</h2>
+                     </div>
+                     
+                     <div id="no-result-div">
+                           <h2>No more  search results at the moment!</h2>
+                     </div>
+                     <div id="api-error-div">
+                          <h3>Oops!</h3>
+                          <h4>It’s not you. It’s us. Give it another try, please.</h4>
+                          <hr/>
+                          <ul>
+                               <li>Check your intenet connectivity and try again later after some time.</li>
+                          </ul>
+                     </div>
+                     <div id="no-search-match">
+                          <h3>No search results found!</h3>
+                          <h4>Try below suggested quick fixes!</h4>
+                          <ul>
+                               <li>Make sure that your search is spelled correctly.</li>
+                               <li>A valid City or 
+                               State should contain alphabets and spaces only</li>
+                               <li>Avoid numbers and special characters in your seacrhing</li>
+                               <li>Type one character at time and Wait for results to appear then scroll down to find a certain City or State </li>
+                          </ul>
+                     </div>
+     	   </div>	
+     	 </div>
+     </section>
+
+     <footer id="app-intro">
+            <div class="container">
+              <p>SearchIT is a simple web application for searching all US cities  details by city or state name</p> 
+              <p>ANDELA Code Defense Challenge, Copyright &copy; 2019</p>
+            </div>
+     </footer>
+
+  <!-- Model -->
+  <div id="myModal" class="modal">
+   <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2 id="city">City</h2>
+    </div>
+    <div class="modal-body">
+      <p id="growth">Growth Rate</p>
+      <p id="latitude">Latitude</p>
+      <p id="longitude">Longitude</p>
+      <p id="population">Population</p>
+      <p id="rank">Rank</p>
+    </div>
+    <div class="modal-footer">
+      <h5 id="state">State</h5>
+    </div>
+  </div>
+ </div>
+</div>
+</div>
+    <script type="text/javascript" src="js/script.js"></script>   
+</body>
+</html>

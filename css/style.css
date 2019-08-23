@@ -1,0 +1,259 @@
+body{
+    font:15px/1.5 Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/*Global*/
+.container{
+	width: 90%;
+	margin:auto;
+	overflow: hidden;
+}
+
+/*Header*/
+header{
+	background-color: #35424a;
+	color: #ffffff;
+	padding-top: 30px;
+	min-height: 70px;
+	border-bottom: #e8491d 3px solid;
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+header .highlight{
+	color: #e8491d;
+	font-weight: bold;
+}
+
+header #branding-title{
+	float: left;
+  margin: 0;
+  padding: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+}
+
+header #branding-title h1{
+   margin: 0;
+}
+
+header form{
+	float: right;
+	font-size: 30px;
+}
+
+
+header input{
+	  border: none;
+    border-radius: 40px;
+    padding: 10px;
+    margin: 10px;
+    height: 30px;
+    width: 850px;
+    border:2px solid #eaeaea;
+    outline:none;
+    font-size: 20px;
+}
+
+header input:hover{
+    border-color: #a0a0a0 #b9b9b9 #b9b9b9 #b9b9b9;
+}
+
+header input:focus{
+    border-color:#4d90fe;
+}
+
+::placeholder{
+	font-size: 20px;
+	color: #D3D3D3;
+}
+/*Search Resuslts*/
+#content{
+	margin-top: 30px;
+  margin-bottom: 200px;
+}
+#content ul{
+   margin: 0;
+   padding: 0;
+   text-align: center;
+   margin-top: 10px;
+
+}
+
+#content li{
+ margin-bottom: 40px;
+ padding-top: 10px;
+}
+
+#content li:last-child {
+ margin-bottom: 0px;
+}
+
+#content ul li{
+  border-bottom: 1px dashed lightgray;
+  background-color: white;
+  padding-left: 30px;
+  padding-right: 10px;
+  border-radius: 40px;
+  height: 50px;
+}
+#content li .modalListener{
+  color: black;
+  font-family: 'Anton', sans-serif;
+  font-size: 20px;
+  display: block;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+#content ul li:hover{
+  background-color: snow;
+  transition: 0.5s;
+  padding-left: 30px;
+  padding-right: 10px;
+  border-radius: 40px;
+  height: 50px;
+}
+/*Modal*/
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+#content  h2,h3{
+  margin: 0;
+  margin-top: 3px;
+  padding: 0;
+  color: #35424a;
+  font-size: 25px;
+  font-weight: 900;
+}
+#content #no-search-match,#results-count{
+  display: none;
+}
+.results-list div{
+ text-align: center;
+}
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header,.modal-footer {
+  padding: 2px 16px;
+  background-color: #35424a;
+  color: white;
+}
+.modal-body {padding: 2px 16px;}
+
+#loading-div,#api-error-div{
+  display: none;
+}
+/*Footer*/
+footer{
+  padding: 5px;
+  margin-top: 20px;
+  color: #ffffff;
+  background-color: #35424a;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%; 
+  font-size: 20px;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+
+.highlited {
+  background: #ffe606;
+  text-decoration: none;
+}
+
+/*Media Queries*/
+@media(max-width: 768px){
+  
+  header input{
+    width: 400px;
+  }
+}
+@media(max-width: 491px){
+  
+  header input{
+    width: 150px;
+  }
+@media(max-width: 375px){
+  
+  header input{
+    width: 120px;
+  }
+ @media(max-width: 320px){
+  
+  header input{
+    width: 120px;
+  }
+  header #branding-title{
+    font-size: 15px;
+  }
+  header form{
+    font-size: 15px;
+  }
+}
+
